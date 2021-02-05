@@ -1,0 +1,173 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Lemonada:wght@600&family=Raleway&display=swap');
+
+
+* {
+	box-sizing: border-box;
+}
+html {
+	height: 100%;
+}
+body {
+	height: 100%;
+	margin: 0;
+	background: #B2FEFA;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to right, #0ED2F7, #B2FEFA);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to right, #0ED2F7, #B2FEFA); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.hidden {
+	display: none;
+}
+
+.wrapper {
+	width: 70%;
+	padding: 0;
+	max-width: 600px;
+	height: 100%;
+	margin: 3em auto;
+	font-family: 'Raleway', sans-serif;
+}
+
+h1 {
+	padding: 0;
+	text-transform: uppercase;
+	text-align: center;
+	color:white;
+	font-family: 'Lemonada', cursive;
+	text-decoration: underline;
+}
+
+/* FORM */
+
+form {
+	padding: 0;
+  display:flex;
+	flex-direction:row;
+	-webkit-box-shadow: 0px 10px 13px -7px #000000, 5px 5px 16px 5px rgba(0,0,0,0.1); 
+	box-shadow: 0px 10px 13px -7px #000000, 5px 5px 16px 5px rgba(0,0,0,0.1);
+}
+
+input {
+	padding: 0;
+	height: 60px;
+	width: 100%;
+	border:none;
+	border-radius: 5px 0 0 5px;
+  flex-grow:2;
+	font-size: 18px;
+	font-family: 'Raleway', sans-serif;
+	text-align: center;
+}
+
+input:focus {
+  outline: none;
+}
+
+#add-button {
+	width: 30px;
+	border:none;
+	padding-right: 5px;
+	border-radius: 0 5px 5px 0;
+	background-color: white;
+	outline:none;
+}
+
+#add-button:hover {
+	cursor: pointer;
+}
+
+.fa-plus {
+	margin: 0;
+	color: blue;
+	font-size: 20px;
+}
+
+/* LIST CONTAINER */
+
+#container{
+	padding: 30px 20px;
+	height: 300px;
+	overflow: hidden;
+	overflow-y: scroll;
+	margin-top: 50px;
+	list-style: none;
+	border-radius: 5px;
+	background-color: white;
+	-webkit-box-shadow: 0px 10px 13px -7px #000000, 5px 5px 16px 5px rgba(0,0,0,0.1); 
+	box-shadow: 0px 10px 13px -7px #000000, 5px 5px 16px 5px rgba(0,0,0,0.1);
+}
+
+/* LIST ITEMS */
+
+.list-item {
+	margin-top: 20px;
+	border-bottom: 1px solid gray;
+	height: auto;
+	width: auto;
+	padding: 5px 0;
+	background: white;
+	text-align: left;
+	font-size: 20px;
+	word-wrap: break-word;
+}
+
+.remove-btn {
+	padding: 0;
+	float: right;
+	width: 30px;
+	border:none;
+	background-color:transparent;
+	outline:none;
+}
+
+.check-btn {
+	padding: 0;
+	float: left;
+	width: 20px;
+	margin-right: 10px;
+	border:none;
+	background-color:transparent;
+	outline:none;
+}
+
+.remove-btn:hover, .check-btn:hover {
+	cursor: pointer;
+}
+
+.fa-trash {
+	margin: 0;
+	color: red;
+	font-size: 20px;
+}
+
+.fa-check-square {
+	margin: 0;
+	color: gray;
+	font-size: 20px;
+}
+
+/* Toggler class for the checked item */
+.checked {
+	text-decoration: line-through;
+	color: lightgray;
+}
+
+
+/* MEDIA QUERIES */
+
+@media(min-width: 600px) {
+	input{
+		font-size: 25px;
+	}
+
+	#container {
+		padding: 30px 30px;
+	}
+}
+
+@media(min-width: 800px) {
+	h1 {
+		font-size: 3em;
+	}
+}
