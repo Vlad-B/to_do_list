@@ -1,8 +1,8 @@
 // to do
 // Capture elements in variables
 // Handle logic for the input task action + add button
-// Createreate a new item each time the add button is clicked(or the enter key is pressed)
-// Handle logic the remove btn
+// Create a new item each time the add button is clicked(or the enter key is pressed)
+// Handle logic for the check and remove btn
 
 const input = document.getElementsByTagName('input')[0];
 const addButton = document.querySelector('#add-button');
@@ -30,12 +30,20 @@ const createNewItem = function() {
 
 		// Create check button
 		const newCheckBtn = document.createElement('button');
+		const checkedBox = '<i class="far fa-check-square"></i>';
+		const uncheckedBox = '<i class="far fa-square"></i>';
 		newCheckBtn.classList.add('check-btn');
-		newCheckBtn.innerHTML = '<i class="far fa-check-square"></i>';
+		newCheckBtn.innerHTML = uncheckedBox;
 		newItem.appendChild(newCheckBtn);
 
 		newCheckBtn.addEventListener('click', () => {
-			newItem.classList.toggle('checked');
+			if (!newItem.classList.contains('checked')) {
+				newItem.classList.add('checked');
+				newCheckBtn.innerHTML = checkedBox;
+			} else {
+				newItem.classList.remove('checked');
+				newCheckBtn.innerHTML = uncheckedBox;
+			}
 		});
 
 		// Reset input field

@@ -87,7 +87,7 @@ input:focus {
 
 #container{
 	padding: 30px 20px;
-	height: 300px;
+	height: 500px;
 	overflow: hidden;
 	overflow-y: scroll;
 	margin-top: 50px;
@@ -141,7 +141,7 @@ input:focus {
 	font-size: 20px;
 }
 
-.fa-check-square {
+.fa-check-square, .fa-square {
 	margin: 0;
 	color: gray;
 	font-size: 20px;
